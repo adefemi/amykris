@@ -1,0 +1,109 @@
+.blog{
+  background-image: $storeImage;
+}
+
+.blog-container{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  .blog-header{
+    text-align: left;
+    width: 100%;
+    max-width: 1000px;
+    min-width: 300px;
+    margin-top: 30px;
+    font-size: 20px;
+    box-sizing: border-box;
+    @media screen and (max-width: 1000px) {
+      padding-left: 10px;
+    }
+
+  }
+}
+
+.blog-content{
+  max-width: 1000px;
+  min-width: 300px;
+  margin: 20px 0;
+
+  .blog-item {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
+    margin: 20px 0;
+    display: flex;
+
+    flex-wrap: wrap;
+
+    .blog-img{
+      max-width: 400px;
+      min-width: 250px;
+      width: 100%;
+      position: relative;
+      max-height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media screen and (max-width: 700px) {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      img{
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+      }
+    }
+
+    .detail-con{
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-width: 250px;
+      flex: 1;
+      background-color: white;
+
+      .blog-title{
+        font-weight: bold;
+        font-size: 15px;
+        color: $tealAccent;
+        margin-bottom: 10px;
+      }
+
+      .blog-detail{
+        font-size: 13px;
+        color: $tealAccent;
+        line-height: 25px;
+      }
+
+      .readmore{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: flex-end;
+
+        button{
+          background-color: $tealAccent;
+          color: white;
+          padding: 10px;
+          border: 1px solid darken($tealAccent, 10%);
+          cursor: pointer;
+          outline: none;
+          transition: all 400ms ease;
+          margin-top: 20px;
+
+          &:hover{
+            background-color: darken($tealAccent, 10%);
+          }
+        }
+      }
+    }
+  }
+}

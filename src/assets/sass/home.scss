@@ -1,0 +1,17 @@
+.footer{
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darken($tealAccent, 10%);
+  color: white;
+  font-size: 14px;
+  font-family: $mainFont;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+
+  a{
+    color: lighten($tealAccent, 30%);
+  }
+}

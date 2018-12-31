@@ -1,0 +1,30 @@
+const serverHost = 'http://localhost:8000/api/';
+export function backEndLinks() {
+    return{
+        auth: serverHost+'auth/',
+        refresh: serverHost+'auth/refresh/',
+        user: serverHost+'user/',
+        userProfile: serverHost+'user/profile/',
+        userAddress: serverHost+'user/address/',
+        userSearch: serverHost+'user/search/',
+        userNotification: serverHost+'user/notification/',
+        userVerification: serverHost+'user/verification',
+        about: serverHost+'about/',
+        pageSettingImage: serverHost+'page-setting/images/',
+        pageSettingSocial: serverHost+'page-setting/socials/',
+        pageSettingContact: serverHost+'page-setting/contact/',
+        service: serverHost+'service/',
+        slider: serverHost+'slider/',
+        blog: serverHost+'blog/',
+        blogReaction: serverHost+'blog/reaction/',
+        blogHighlight: serverHost+'blog/highlight/',
+        product: serverHost+'product/',
+        productType: serverHost+'product/type/',
+        productReaction: serverHost+'product/reaction/',
+        productPurchase: serverHost+'product/purchase/',
+        productCapture: serverHost+'product/capture/',
+        productHighlight: serverHost+'product/highlight/',
+        passwordReset: serverHost+'password-reset/',
+        sendMessage: serverHost+'send-message/',
+    }
+}

@@ -1,0 +1,92 @@
+.adefemi-slider{
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  background-color: white;
+
+  @media screen and (max-width: 500px){
+    height: 50vh;
+  }
+  @media screen and (max-width: 1000px){
+    height: 65vh;
+  }
+}
+
+.slider-proceed{
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 1px rgba(black, 0.2);
+  z-index: 1;
+}
+
+.slider-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .slider-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .image-content{
+      position: relative;
+      float: right;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        height: 100%; width: 100%;
+        background-color: rgba(black, 0.4);
+      }
+    }
+  }
+
+  .title{
+    font-size: 6vh;
+    color: $mainColor;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .subtitle{
+    font-family: $subFont;
+    color: darken(white, 5%);
+    margin-bottom: 80px;
+    font-size: 13px;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+}

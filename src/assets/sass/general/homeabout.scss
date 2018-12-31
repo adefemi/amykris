@@ -1,0 +1,50 @@
+.about-wrapper{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: white;
+}
+
+.about-contain{
+  max-width: 1000px;
+  min-width: 300px;
+  width: 100%;
+  margin: 50px auto;
+
+  .heading{
+    padding: 15px 10px;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: $tealAccent;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  p{
+    line-height: 30px;
+    color: darken(white, 60%);
+    font-size: 14px;
+  }
+
+  .about-content-control{
+    .header{
+      font-size: 15px;
+      margin-bottom: 10px;
+      color: darken(white, 80%);
+      padding-bottom: 10px;
+      border-bottom: 1px solid darken(white, 15%);
+      font-weight: 500;
+    }
+    ul{
+      margin-bottom: 20px;
+      li{
+        list-style: inherit !important;
+        list-style-type: disc;
+        line-height: 30px;
+        color: darken(white, 60%);
+        font-size: 14px;
+      }
+    }
+  }
+}

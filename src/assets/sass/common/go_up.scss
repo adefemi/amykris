@@ -1,0 +1,26 @@
+.go-up{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  background-color: darken($mainColor, 30%);
+  color: white;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  transition: .5s ease;
+  opacity: 1;
+
+  &:hover{
+    background-color:  darken($mainColor, 40%);;
+    cursor: pointer;
+  }
+}
+
+.go-up.close{
+  transform: scale(0);
+  opacity: 0;
+}

@@ -1,0 +1,49 @@
+html>*{
+  font-family: $mainFont;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+html, body, ul, ol{
+  margin: 0; padding: 0;
+}
+textarea{
+  display: block;
+}
+html, body{
+  background-color: darken(white, 5%);
+}
+
+li{
+  list-style-type: none;
+}
+a, a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper{
+  width: 100%;
+  min-height: 100vh;
+}
+
+button.disabled{
+  background-color: #999999;
+  cursor: not-allowed !important;
+  color: white;
+}
+
+.rotate{
+  animation: Rotate infinite linear 1s ;
+}
+
+@keyframes Rotate {
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}

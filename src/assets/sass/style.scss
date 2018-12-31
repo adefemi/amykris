@@ -1,0 +1,35 @@
+
+@import "./variable";
+@import "./main";
+@import "./home";
+@import "./service";
+@import "./feedback";
+@import "./feedback";
+@import "./blog";
+@import "./auth";
+@import "./general/header";
+@import "./general/slider";
+@import "./general/homeservice";
+@import "./general/homeabout";
+@import "./general/contact";
+@import "./common/slider";
+@import "./common/serviceIn";
+@import "./common/pagination";
+@import "./common/slickSlider";
+@import "./common/loader";
+@import "./common/toast";
+@import "./common/go_up";
+@import "./common/paystack";
+@import "./common/verification";
+@import "./account";
+
+
+.switch-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.switch-wrapper > div {
+  position: absolute;
+  width: 100%;
+}

@@ -1,0 +1,118 @@
+.sliderMain{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  background-color: black;
+
+  li{
+    transform: translateY(-50px);
+    background-color: white !important;
+    border-radius: 50%;
+  }
+  div{
+    height: 100%;
+    color: white;
+    position: relative;
+    outline: none;
+    .captions{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      color: $mainColor;
+      transform: translateY(-100%);
+      visibility: hidden;
+      opacity: 0;
+      font-weight: bold;
+      font-family: $mainFont;
+      text-transform: uppercase;
+      background-color: rgba(0,0,0,0.4);
+      padding: 20px 0;
+
+      @media screen and (max-width: 600px){
+        font-weight: 500;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .imagecon{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+    outline: none;
+
+    img{
+      height: 100%;
+      width: 100%;
+      display: block;
+      position: relative;
+      outline: none;
+    }
+  }
+
+  .cover-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .slick-slide.slick-active.slick-center.slick-current{
+    .imagecon, .cover-image{
+      transition: .4s ease;
+      transform: scaleX(2);
+      .image-container, .image-loader{
+        transform: scaleX(1);
+      }
+    }
+    @media screen and (max-width: 600px){
+      .imagecon, .cover-image{
+        transition: .4s ease;
+        transform: scaleX(1);
+      }
+    }
+    position: relative;
+    z-index: 2;
+    .captions{
+      transition: .5s .5s ease;
+      transform: translateY(50%) scaleX(1) !important;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.sliderMain2{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  div {
+    height: 100%;
+    outline: none;
+    background-color: black;
+    color: white;
+    position: relative;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+    outline: none;
+  }
+}

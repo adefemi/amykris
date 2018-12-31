@@ -1,0 +1,296 @@
+.account-header{
+  min-height: 40vh;
+  background-color: blue;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+  .bgcover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .account-info{
+    width: 100%;
+    margin: 20px auto;
+    max-width: 1000px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+    position: relative;
+    line-height: 30px;
+  }
+}
+
+.account-container{
+  max-width: 1000px;
+  min-width: 300px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 10px;
+  box-sizing: border-box;
+  min-height: 50vh;
+
+  h3{
+    font-weight: 400;
+    font-size: 16px;
+    color: darken(white, 70%);
+    border-bottom: 1px solid darken(white, 10%);
+    padding: 10px 0;
+
+    span{
+      float: right;
+      font-size: 13px;
+      border: 1px solid $tealAccent;
+      padding: 5px;
+      font-weight: bold;
+      transition: .5s ease;
+      cursor: pointer;
+
+      &:active{
+        background-color: $tealAccent;
+        color: white;
+      }
+    }
+  }
+
+  .breadcrum{
+    display: flex;
+    font-size: 13px;
+    color: darken(white, 70%);
+
+    li{
+      margin-right: 10px;
+      padding-right: 10px;
+      border-right: 1px solid darken(white, 30%);
+      &:last-child{
+        margin-right: 0;
+        padding-right: 0;
+        border-right: none;
+      }
+    }
+
+    li.active{
+      color: darken(white, 80%);
+      font-weight: 500;
+    }
+  }
+
+  button{
+    height: 50px;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  button.notify{
+    height: 40px;
+    padding: 0 10px;
+    background-color: $tealAccent;
+    color: white;
+  }
+
+  .account-data{
+    .form-group{
+      margin-bottom: 20px;
+      label{
+        font-size: 14px;
+        color: darken(white, 60%);
+      }
+
+      input, select, textarea{
+        height: 30px;
+        width: 100%;
+        border: 1px solid darken(white, 20%);
+        max-width: 500px;
+        padding-left: 10px;
+        box-sizing: border-box;
+      }
+      textarea{
+        height: auto;
+        max-width: 700px;
+        padding: 10px;
+      }
+    }
+
+    button.update{
+      background-color: $redAccent;
+      color: white;
+    }
+    button.submit{
+      background-color: $tealAccent;
+      color: white;
+    }
+  }
+
+  .account-contents{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1em;
+
+    .content-card, .content-card-purchase{
+      background-color: white;
+      border: 1px solid darken(white, 10%);
+      padding: 10px 15px;
+      box-sizing: border-box;
+
+      .content-head{
+        font-size: 15px;
+        font-weight: 400;
+        color: darken(white, 80%);
+        padding: 10px 0;
+        border-bottom: 1px solid darken(white, 10%);
+      }
+
+      .list{
+        li{
+          margin-top: 15px;
+          font-size: 13px;
+          font-weight: 400;
+          color: darken(white, 60%);
+          position: relative;
+          line-height: 25px;
+
+          span{
+            display: block;
+            margin-top: 2px;
+            color: darken($mainColor, 30%);
+            font-size: 11px;
+          }
+        }
+      }
+
+
+      .info-content{
+        p{
+          font-size: 13px;
+          font-weight: 400;
+          color: darken(white, 70%);
+        }
+
+        a{
+          margin-right: 10px;
+          height: 40px;
+          width: auto;
+          padding: 0 10px !important;
+          border: 1px solid darken(white, 20%);
+          outline: none;
+          cursor: pointer;
+          border-radius: 0;
+          background-color: darken(white, 10%);
+          color: darken(white, 80%);
+          display: inline-block;
+          font-size: 14px;
+          line-height: 40px;
+
+          &:hover{
+            box-shadow: none;
+          }
+        }
+      }
+
+    }
+
+    .content-card-purchase{
+      .list{
+        li{
+          margin-left: 20px;
+          &:before{
+            position: absolute;
+            content: '';
+            top: 7px;
+            left: -20px;
+            width: 10px;
+            height: 10px;
+            background-color: $mainColor;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  .account-notes{
+    .notes-card{
+      border: 1px solid darken(white, 15%);
+      padding: 10px;
+      margin-bottom: 20px;
+
+      p{
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        color: darken(white, 70%);
+        line-height: 30px;
+        margin-bottom: 10px;
+      }
+
+      .time{
+        font-size: 12px;
+        color: darken(white, 70%);
+      }
+    }
+    .notes-card.success{
+      border-color: $purpleAccent;
+      .time{
+        color: darken($purpleAccent, 20%);
+      }
+    }
+    .notes-card.error{
+      border-color: $redAccent;
+      .time{
+        color: darken($redAccent, 20%);
+      }
+    }
+  }
+}
+
+.input-inline{
+  display: flex;
+  margin-bottom: 20px;
+  label{
+    font-size: 14px;
+    color: darken(white, 70%);
+  }
+  .form-group-inline{
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  input[type=radio]{
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    padding: 0;
+    margin: 0;
+    margin-left: 5px;
+    box-sizing: border-box;
+    border: 1px solid darken(white, 70%);
+    cursor: pointer;
+    transition: all .5s ease;
+    outline: none;
+
+    &:checked{
+      border-top: none;
+      border-left: none;
+      width: 10px;
+      border-color: $tealAccent;
+      transform: rotate(45deg) translateY(-5px);
+    }
+  }
+}

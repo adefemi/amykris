@@ -1,0 +1,135 @@
+.image-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darken(white, 5%);
+
+  .image-loader{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    border: 1px solid darken(white, 20%);
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6px;
+    color: darken(white, 40%);
+    animation: Ripple infinite alternate 1000ms ease;
+  }
+}
+
+.mainloader-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darken($mainColor, 20%);
+
+  .mainloader-loader{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 2px solid white;
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0;
+    animation: Ripple infinite alternate 1200ms ease;
+  }
+  .mainloader-loader1{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 2px solid white;
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0;
+    animation: Ripple infinite alternate 1200ms ease;
+  }
+  .mainloader-loader2{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 2px solid white;
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0;
+    animation: Ripple infinite alternate 1200ms ease;
+  }
+}
+
+
+.subloader-container{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 10px;
+  box-sizing: border-box;
+  max-width: 1000px;
+
+  .subloader-loader{
+    width: 35px;
+    height: 35px;
+    position: relative;
+    border: 2px solid darken(white, 20%);
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+    color: darken(white, 40%);
+    animation: Ripple infinite alternate 1000ms ease;
+  }
+}
+
+.image-container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darken(white, 5%);
+
+  .image-loader{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    border: 1px solid darken(white, 20%);
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6px;
+    color: darken(white, 40%);
+    animation: Ripple infinite alternate 1000ms ease;
+  }
+}
+
+@keyframes Ripple {
+  0%{
+    transform: scale(0);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(2);
+    opacity: 1;
+  }
+
+}
+
+
